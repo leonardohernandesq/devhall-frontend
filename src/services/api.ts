@@ -7,7 +7,7 @@ export function setupAPIClient(ctx = undefined){
     let cookies = parseCookies(ctx);
 
     const api = axios.create({
-        baseURL: 'http://localhost:3333',
+        baseURL: 'https://devhal-backend-production.up.railway.app/',
         headers:{
             Authorization : `Bearer ${cookies['@devhall.token']}`
         }
