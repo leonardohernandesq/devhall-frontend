@@ -1,4 +1,4 @@
-import * as S from './style'
+import * as S from '../../../styles/pages/filter'
 import { withRouter } from 'next/router'
 import {useEffect, useState} from 'react'
 import { setupAPIClient } from '../../services/api'

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { AuthHeader } from '../../components/AuthHeader';
 import { setupAPIClient } from "../../services/api";
 import { canSSRAuth } from '../../utils/canSSRAuth';
-import * as S from './style';
+import * as S from '../../../styles/pages/dashboard';
 
 import {FiSearch, FiEdit, FiTrash2} from 'react-icons/fi'
 import Link from 'next/link';

@@ -1,4 +1,4 @@
-import * as S from './style';
+import * as S from '../../../styles/pages/wishlist';
 import { useEffect, useState } from 'react'
 import { Button } from '../../components/Button';
 import Link from 'next/link';

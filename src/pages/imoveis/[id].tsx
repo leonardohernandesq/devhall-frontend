@@ -1,5 +1,5 @@
 import { useState, ChangeEvent } from 'react'
-import * as S from './style'
+import * as S from '../../../styles/pages/imoveis'
 import { AuthHeader } from '../../components/AuthHeader'
 import { Banner } from '../../components/Banner'
 import { Input, Textarea } from '../../components/Input';

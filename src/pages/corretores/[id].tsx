@@ -1,6 +1,6 @@
 import { useState, FormEvent } from 'react';
 
-import * as S from './style';
+import * as S from '../../../styles/pages/corretores';
 import { AuthHeader } from '../../components/AuthHeader';
 import { Banner } from '../../components/Banner';
 import { Input } from '../../components/Input';

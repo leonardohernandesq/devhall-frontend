@@ -8,7 +8,7 @@ import { BiPhoneCall, BiMailSend } from 'react-icons/bi';
 import { Footer } from "../../components/Footer";
 
 import Link from "next/link";
-import * as S from './style'
+import * as S from '../../../styles/pages/imovel'
 
 interface IDataBroker{
     id: string,

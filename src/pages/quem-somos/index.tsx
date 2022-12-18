@@ -1,4 +1,4 @@
-import * as S from './style';
+import * as S from '../../../styles/pages/quem-somos';
 
 import { Banner } from '../../components/Banner';
 import { ClientHeader } from '../../components/ClientHeader';

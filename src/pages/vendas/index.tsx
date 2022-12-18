@@ -1,4 +1,4 @@
-import * as S from './style';
+import * as S from '../../../styles/pages/vendas';
 import { GetServerSidePropsContext } from 'next';
 import { Banner } from '../../components/Banner';
 import { ClientHeader } from '../../components/ClientHeader';
