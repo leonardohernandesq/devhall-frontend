@@ -8,8 +8,9 @@ const nextConfig = {
   images:{
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: 'devhal-backend-production.up.railway.app',
+        protocol: 'https',
+        hostname: 'devhal-backend-production.up.railway.app/',
+        port: '3000',
         pathname: '/files',
       },
     ],
