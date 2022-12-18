@@ -8,6 +8,7 @@ import { Button } from '../../components/Button';
 import { setupAPIClient } from '../../services/api';
 import { canSSRAuth } from '../../utils/canSSRAuth';
 import router from 'next/router';
+import { toast } from 'react-toastify';
 
 export default function Corretores(){
     const [nome, setNome] = useState('')
@@ -34,7 +35,7 @@ export default function Corretores(){
                 setStatus('true')
                 setTelefone('')
 
-                alert('Cadastrado');
+                toast.success('Corretor cadastrado com sucesso.')
                 router.push('/dashboard')
             }).catch((err) => {
                 console.log(err)
