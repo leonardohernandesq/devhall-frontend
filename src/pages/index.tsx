@@ -130,7 +130,7 @@ export default function Home({sellHouses, rentHouses}: IPropsData) {
             <S.DivHeaderSection>
               <h2>Imóveis para Vender</h2>
               <Link href="/vendas">
-                <button>
+                <button> 
                   Veja todos imóveis
                 </button>
               </Link>

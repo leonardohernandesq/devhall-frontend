@@ -20,7 +20,8 @@ export const SaveDiv = styled.div`
     padding: 10rem 0rem;
     width:100%;
     div{
-        width:31.25rem;
+        max-width:31.25rem;
+        width:90%;
 
         h1{
             margin-bottom: 1rem ;

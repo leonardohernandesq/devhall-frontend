@@ -73,9 +73,9 @@ export const Header = styled.header`
         color:var(--light-900)
     }
 
-    @media(max-width: 53.125rem){
+    @media(max-width: 850px){
         flex-direction: column;
-        margin-bottom:-9.375rem;
+        margin-bottom:-15rem;
 
         img{
             margin-bottom:0.625rem;

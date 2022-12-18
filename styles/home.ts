@@ -19,6 +19,19 @@ export const Container = styled.div`
         display: flex;
         justify-content: center;
     }
+
+    @media(max-width:850px){
+        img{
+            height: 40rem;
+        }
+    }
+
+    @media(max-width:460px){
+        img{
+            height: 45rem;
+        }
+    }
+
 `
 
 export const DivInputSearch = styled.div`
@@ -49,6 +62,10 @@ export const DivInputSearch = styled.div`
     @media(max-width:53.125rem){
         grid-template-columns: auto auto;
         top: 25rem;
+    }
+    @media(max-width:28.75rem){
+        grid-template-columns: auto;
+        top: 18rem;
     }
 `
 
