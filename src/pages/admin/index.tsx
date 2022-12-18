@@ -6,7 +6,7 @@ import Image from 'next/image'
 import Banner from '../../../public/images/banner-sign.jpg'
 import Logo from '../../../public/images/logo-black-red.svg'
 
-import * as S from './signin'
+import * as S from './style'
 import { Button } from '../../components/Button'
 import { Input } from '../../components/Input'
 

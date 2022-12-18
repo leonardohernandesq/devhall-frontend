@@ -9,8 +9,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'http',
-        hostname: 'localhost',
-        port: '3333',
+        hostname: 'devhal-backend-production.up.railway.app',
         pathname: '/files',
       },
     ],

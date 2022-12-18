@@ -4,8 +4,6 @@ export const Container = styled.div`
     height:100vh;
     overflow:hidden;
     display:flex;
-
-
 `
 
 export const DivImage = styled.div`
