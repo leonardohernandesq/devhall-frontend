@@ -8,11 +8,13 @@ import { Button } from '../../components/Button';
 import Link from 'next/link';
 import { HouseCard } from '../../components/HouseCard';
 import { Banner } from '../../components/Banner';
+import Loading from '../../components/Loading';
 
 
 function Filter({ router }){
     const apiClient = setupAPIClient();
     const [filter, setFilter] = useState([])
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
         async function RequestProps(){
             const response = await apiClient.get('/filter/houses',{
@@ -27,6 +29,7 @@ function Filter({ router }){
             })
 
             setFilter(response.data)
+            setLoading(false);
         }
 
         RequestProps();
@@ -54,52 +57,65 @@ function Filter({ router }){
     
         housesArray.push(response.data);
         localStorage.setItem("@devhall", JSON.stringify(housesArray));
-    }  
+    }
 
     return(
-        <S.Container>
-        <ClientHeader />
-        <Banner thumbnail='banner-houses.jpg' title='Filtros Personalizados'/>
+        <>
+            {
+                loading? 
+                <>
+                    <Loading />
+                </> 
+                :
+                
+                <>
+                    <S.Container>
+                        <ClientHeader />
+                        <Banner thumbnail='banner-houses.jpg' title='Filtros Personalizados'/>
 
-        <S.Wrapper>
+                        <S.Wrapper>
 
-        {
-            filter.length !== 0 ?
-                <S.DivGridHouses>
-                    {filter.map((item, index) => {
-                        return(
-                            <HouseCard 
-                                key={index}
-                                id={item.id}
-                                title={item.title}
-                                price={item.price}
-                                area={item.area}
-                                bedroom={item.bedroom}
-                                type={item.type}
-                                status={item.status}
-                                thumbnail={item.thumbnail}
-                                address={item.address}
-                                handleFavorite={handleFavorite}
-                            />
-                        )
-                    })}
-                </S.DivGridHouses>
-            :
-            <S.SaveDiv>
-                <div>
-                    <h1>A sua busca é inválida, tente novamente</h1>
-                        <Link href="/">
-                            <Button bg='var(--primary)' color='var(--light-900)'>
-                                    Voltar para Home
-                            </Button>
-                        </Link>
-                </div>
-            </S.SaveDiv>
-        }
-        </S.Wrapper>
-        <Footer />
-    </S.Container>
+                        {
+                            filter.length !== 0 ?
+                                <S.DivGridHouses>
+                                    {filter.map((item, index) => {
+                                        return(
+                                            <HouseCard 
+                                                key={index}
+                                                id={item.id}
+                                                title={item.title}
+                                                price={item.price}
+                                                area={item.area}
+                                                bedroom={item.bedroom}
+                                                type={item.type}
+                                                status={item.status}
+                                                thumbnail={item.thumbnail}
+                                                address={item.address}
+                                                handleFavorite={handleFavorite}
+                                            />
+                                        )
+                                    })}
+                                </S.DivGridHouses>
+                            :
+                            <S.SaveDiv>
+                                <div>
+                                    <h1>A sua busca é inválida, tente novamente</h1>
+                                        <Link href="/">
+                                            <Button bg='var(--primary)' color='var(--light-900)'>
+                                                    Voltar para Home
+                                            </Button>
+                                        </Link>
+                                </div>
+                            </S.SaveDiv>
+                        }
+                        </S.Wrapper>
+                        <Footer />
+                    </S.Container>
+                </>
+            }
+        </>
     );
+
 }
 
 export default withRouter(Filter)
