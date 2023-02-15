@@ -1,5 +1,4 @@
-import React, {useState, useRef, RefObject, useEffect} from 'react';
-import { parseCookies, setCookie, destroyCookie } from 'nookies';
+import React, {useState, useRef, RefObject} from 'react';
 import Image from 'next/image';
 import * as S from '../../styles/home';
 
@@ -200,7 +199,7 @@ export default function Home({sellHouses, rentHouses}: IPropsData) {
               <button onClick={() => handleLeftClick(carouselSecondary)} className='LeftButton'> <FiChevronLeft size={30} color={'var(--light-900)'} /> </button>          
               <S.DivCarrousel ref={carouselSecondary}>
                 {
-                  rentHouses.map((item, index) => {
+                  rentHouses?.map((item, index) => {
                     return(
                       <HouseCard
                         key={item.id}
@@ -224,7 +223,7 @@ export default function Home({sellHouses, rentHouses}: IPropsData) {
 
               <S.DivCarrouselMobile>
               {
-                  rentHouses.map((item, index) => {
+                  rentHouses?.map((item, index) => {
                     return(
                       <HouseCard
                         key={item.id}
