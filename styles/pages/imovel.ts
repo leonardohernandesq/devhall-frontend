@@ -48,7 +48,7 @@ export const Banner = styled.div<IBackground>`
     }
 
     ${props => css`
-        background-image: url(https://devhal-backend-production.up.railway.app/files/${props.bg});
+        background-image: url(https://devhall-backend.vercel.app/files/${props.bg});
     `}
     background-repeat: no-repeat;
     background-size: cover;

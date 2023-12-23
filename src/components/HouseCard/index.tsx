@@ -47,7 +47,7 @@ export function HouseCard({id, status, thumbnail, title, address, area, bedroom,
                     <FiHeart color={selected === true ? 'white' : 'red'}/>
                 </S.HeartIconDiv>
                     
-                    <img src={`https://devhall-backend-production.up.railway.app/files/${thumbnail}`} alt="Imagem do imóvel "/>
+                    <img src={`https://devhall-backend.vercel.app/files/${thumbnail}`} alt="Imagem do imóvel "/>
             </S.ImageContainer>
                 <h2>{title}</h2>
             <S.IconContainer>

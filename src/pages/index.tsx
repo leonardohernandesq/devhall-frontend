@@ -202,16 +202,16 @@ export default function Home({sellHouses, rentHouses}: IPropsData) {
                   rentHouses?.map((item, index) => {
                     return(
                       <HouseCard
-                        key={item.id}
-                        id={item.id}
-                        status={item.status}
-                        thumbnail={item.thumbnail}
-                        title={item.title}
-                        address={item.address}
-                        area={item.area}
-                        bedroom={item.bedroom}
-                        type={item.type}
-                        price={item.price}
+                        key={item?.id}
+                        id={item?.id}
+                        status={item?.status}
+                        thumbnail={item?.thumbnail}
+                        title={item?.title}
+                        address={item?.address}
+                        area={item?.area}
+                        bedroom={item?.bedroom}
+                        type={item?.type}
+                        price={item?.price}
                         className="card"
                         handleFavorite={handleFavorite}
                       />
@@ -226,16 +226,16 @@ export default function Home({sellHouses, rentHouses}: IPropsData) {
                   rentHouses?.map((item, index) => {
                     return(
                       <HouseCard
-                        key={item.id}
-                        id={item.id}
-                        status={item.status}
-                        thumbnail={item.thumbnail}
-                        title={item.title}
-                        address={item.address}
-                        area={item.area}
-                        bedroom={item.bedroom}
-                        type={item.type}
-                        price={item.price}
+                        key={item?.id}
+                        id={item?.id}
+                        status={item?.status}
+                        thumbnail={item?.thumbnail}
+                        title={item?.title}
+                        address={item?.address}
+                        area={item?.area}
+                        bedroom={item?.bedroom}
+                        type={item?.type}
+                        price={item?.price}
                         className="card"
                         handleFavorite={handleFavorite}
                       />

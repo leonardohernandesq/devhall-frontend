@@ -9,7 +9,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'devhal-backend-production.up.railway.app/',
+        hostname: 'devhall-backend.vercel.app/',
         port: '3000',
         pathname: '/files',
       },
